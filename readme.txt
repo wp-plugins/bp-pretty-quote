@@ -1,5 +1,6 @@
 === BP Pretty Quote ===
 Contributors: densey
+Donate Link: http://beyond-paper.com/bp-pretty-quote-wordpress-plugin/
 Tags: shortcode,quotes,pullquotes
 Requires at least: 4.0
 Tested up to: 4.2.1
@@ -27,7 +28,8 @@ Thanks to [msurguy](http://bootsnipp.com/snippets/featured/dynamic-avatar-blur) 
 
 Numbers 2-7 are via [CoDrops](http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/) with some minor changes.
 
-[Visit BP Pretty Quote[(http://beyond-paper.com/bp-pretty-quote-wordpress-plugin/) for more information and support.
+[Visit BP Pretty Quote]
+(http://beyond-paper.com/bp-pretty-quote-wordpress-plugin/) for more information and support.
  
 
 == Installation ==
@@ -53,16 +55,25 @@ BP Pretty Quote can be put on a Post or Page using the following code:
 
 The options are as follows:
 
--style:  default | leather | swoosh | balloon | vinyl | polaroid | playbill  *(Default is default)*
--align: left | right | center  *(Default is right)*
--width:  width in px or %. *(Default is 30%)*
--author: The author of the quote  *(Required)*
--sourcename: The name of the source of the quote (i.e. a book title)
--source:  The url for the sourcename (i.e. link to book on Amazon)
--image: The url to the image.  Use full url. (i.e. http://something.com/myurl.jpg)
--alt:  The alt text for the image
--color: Background color for the block.  Only for default style currently.
--textcolor: Text color for the block.  Only for default style currently.
+-**style**:  default | leather | swoosh | balloon | vinyl | polaroid | playbill  *(Default is default)*
+
+-**align**: left | right | center  *(Default is right)*
+
+-**width**:  width in px or %. *(Default is 30%)*
+
+-**author**: The author of the quote  *(Required)*
+
+-**sourcename**: The name of the source of the quote (i.e. a book title)
+
+-**source**:  The url for the sourcename (i.e. link to book on Amazon)
+
+-**image**: The url to the image.  Use full url. (i.e. http://something.com/myurl.jpg)
+
+-**alt**:  The alt text for the image
+
+-**color**: Background color for the block.  Only for default style currently.
+
+-**textcolor**: Text color for the block.  Only for default style currently.
 
 The quotation itself goes between the [bpiq] [/bpiq] tags.
 
@@ -101,6 +112,8 @@ The author and source in the diagonal bar may need adjusting.  I've found that p
 Specifically, change the translate dimensions.  The first (190px) moves the bar left and right so the text is better centered.  The second number (90px) moves the bar farther up & left (smaller number) or down & right(bigger number).  
 
 == Frequently Asked Questions ==
+
+To come
 
 
 
