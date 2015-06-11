@@ -1,12 +1,12 @@
 === BP Pretty Quote ===
 Contributors: densey
-Donate Link: http://beyond-paper.com/bp-pretty-quote-wordpress-plugin/
+Donate Link: http://beyondpaper.com/bpprettyquotewordpressplugin/
 Tags: shortcode,quotes,pullquotes
 Requires at least: 4.0
 Tested up to: 4.2.1
 Stable tag: /trunk/
 License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License URI: http://www.gnu.org/licenses/gpl2.0.html
 
 BP Pretty Quote provides shortcodes that result in nicely formatted quote blocks.  
 
@@ -24,27 +24,26 @@ Seven styles are available:
 6. Polaroid
 7. Playbill
 
-Thanks to [msurguy](http://bootsnipp.com/snippets/featured/dynamic-avatar-blur) on Bootsnipp for #1.
+Thanks to [msurguy](http://bootsnipp.com/snippets/featured/dynamicavatarblur) on Bootsnipp for #1.
 
-Numbers 2-7 are via [CoDrops](http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/) with some minor changes.
+Numbers 27 are via [CoDrops](http://tympanus.net/codrops/2012/07/25/modernblockquotestyles/) with some minor changes.
 
-[Visit BP Pretty Quote]
-(http://beyond-paper.com/bp-pretty-quote-wordpress-plugin/) for more information and support.
+[Visit BP Pretty Quote](http://beyond-paper.com/bp-pretty-quote-wordpress-plugin/) for more information and support.
  
 
 == Installation ==
 
 From your WordPress dashboard
 
-1. Visit 'Plugins->Add New'
+1. Visit 'Plugins>Add New'
 2. Search for 'BP Pretty Quote'
 3. Activate BP Pretty Quote from your Plugins page
 
 From WordPress.org
 
 1. Download BP Pretty Quote
-2. Extract the folder 'bp-pretty-quote' to your desktop
-3. Upload the folder 'bp-pretty-quote' to your '/wp-content/plugins' directory, using your favorite method (ftp, sftp, scp, etc...)
+2. Extract the folder 'bpprettyquote' to your desktop
+3. Upload the folder 'bpprettyquote' to your '/wpcontent/plugins' directory, using your favorite method (ftp, sftp, scp, etc...)
 4. Activate BP Pretty Quote from your Plugins page. 
 
 **To Use**
@@ -55,25 +54,25 @@ BP Pretty Quote can be put on a Post or Page using the following code:
 
 The options are as follows:
 
--**style**:  default | leather | swoosh | balloon | vinyl | polaroid | playbill  *(Default is default)*
+**style**:  default | leather | swoosh | balloon | vinyl | polaroid | playbill  *(Default is default)*
 
--**align**: left | right | center  *(Default is right)*
+**align**: left | right | center  *(Default is right)*
 
--**width**:  width in px or %. *(Default is 30%)*
+**width**:  width in px or %. *(Default is 30%)*
 
--**author**: The author of the quote  *(Required)*
+**author**: The author of the quote  *(Required)*
 
--**sourcename**: The name of the source of the quote (i.e. a book title)
+**sourcename**: The name of the source of the quote (i.e. a book title)
 
--**source**:  The url for the sourcename (i.e. link to book on Amazon)
+**source**:  The url for the sourcename (i.e. link to book on Amazon)
 
--**image**: The url to the image.  Use full url. (i.e. http://something.com/myurl.jpg)
+**image**: The url to the image.  Use full url. (i.e. http://something.com/myurl.jpg)
 
--**alt**:  The alt text for the image
+**alt**:  The alt text for the image
 
--**color**: Background color for the block.  Only for default style currently.
+**color**: Background color for the block.  Only for default style currently.
 
--**textcolor**: Text color for the block.  Only for default style currently.
+**textcolor**: Text color for the block.  Only for default style currently.
 
 The quotation itself goes between the [bpiq] [/bpiq] tags.
 
@@ -95,18 +94,18 @@ Both Polaroid and Playbill may need some tweaking, depending on your content.
 
 Sometimes the author and source fall off the bottom.  To tweak, apply your styles to:
 
-.bp-attribution  to move the entire block up apply a negative top margin.
+.bpattribution  to move the entire block up apply a negative top margin.
 
-.bp-wrap cite to change the text styling for the source
+.bpwrap cite to change the text styling for the source
 
-.polaroid .bp-author to change the text styling for the author.
+.polaroid .bpauthor to change the text styling for the author.
 
 *Playbill*
 
 The author and source in the diagonal bar may need adjusting.  I've found that playing around with this style will fix issues:
 
-.playbill .bp-attribution {
-     transform: rotate(-40deg) translate(190px, 90px);
+.playbill .bpattribution {
+     transform: rotate(40deg) translate(190px, 90px);
 }
 
 Specifically, change the translate dimensions.  The first (190px) moves the bar left and right so the text is better centered.  The second number (90px) moves the bar farther up & left (smaller number) or down & right(bigger number).  
