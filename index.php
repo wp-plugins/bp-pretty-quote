@@ -3,7 +3,7 @@
  * Plugin Name: BP Pretty Quote
  * Plugin URI:  http://beyond-paper.com/bp-pretty-quote-wordpress-plugin/
  * Description: Adds a formatted quotation to a post or page
- * Version: 1.0
+ * Version: 2.0
  * Author: Diane Ensey
  * Author URI: http://beyond-paper.com
  * License: GPL2
@@ -11,7 +11,7 @@
 
 /*  Copyright 2015 Diane Ensey (email: diane@beyond-paper.com)
     This program is free software; you can redistribute it and/or modify
-    it under the terms of the GNU General Public License, version 2, as 
+    it under the terms of the GNU General Public License, version 2, as
     published by the Free Software Foundation.
 
     This program is distributed in the hope that it will be useful,
@@ -28,8 +28,8 @@ defined( 'ABSPATH' ) or die( 'No direct access permitted!' );
 //Actions
 add_shortcode( 'bpiq', 'bpiq_func' );
 add_action ('wp_enqueue_scripts', 'bpiq_scripts');
-/*Add the Shortcode 
-** Format is 
+/*Add the Shortcode
+** Format is
 ** [bpiq style = 'leather' image="theimage.jpg" title="the title" source="the_source.html" author="The Author"]The Quotation Body[/bpiq]
 ** styles:
 **		default (CSS credit to msurguy: http://bootsnipp.com/snippets/featured/dynamic-avatar-blur)
@@ -38,7 +38,8 @@ add_action ('wp_enqueue_scripts', 'bpiq_scripts');
 **      balloon ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 **      vinyl ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 **      polaroid ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
-**      playbill ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/) 
+**      playbill ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
+**      pullquote (CSS credit to CSS-Tricks: https://css-tricks.com/better-pull-quotes/)
 */
  function bpiq_func( $atts, $content = NULL ) {
     $a = shortcode_atts( array(
@@ -54,8 +55,11 @@ add_action ('wp_enqueue_scripts', 'bpiq_scripts');
 		'textcolor' => 'rgb(136, 172, 217)',
 
     ), $atts );
-	
+
 	$a['style'] = strtolower($a['style']);
+  if($a['style']=='pullquote'){
+    wp_enqueue_script('bpiq_pullquote_js', plugins_url( '/js/bp_pullquote.js', __FILE__ ),array('jquery') );
+  }
 	$a['position'] = strtolower($a['position']);
 
 	$ret = bpiq_format_card($a, $content);
@@ -69,7 +73,7 @@ function bpiq_format_card($a, $content){
 	if($a['position'] == 'right' || $a['position'] == 'left' || $a['position'] == 'center'){
     	$align = 'bpiq_align'.$a['position'];
 	}else{
-		$align = 'bpiq_alignright';	
+		$align = 'bpiq_alignright';
 	}
 	$style = $a['style'];
 	$width = $a['width'];
@@ -82,7 +86,7 @@ function bpiq_format_card($a, $content){
 	$textcolor = $a['textcolor'];
 
 	if($a['style'] == 'default'){
-	
+
 $card = <<<EOM
 	<div class="bpiq_card $align" style="width: $width; background-color: $color; color: $textcolor;">
         <canvas class="bpiq_header-bg" id="bpiq_header-blur"></canvas>
@@ -96,7 +100,16 @@ $card = <<<EOM
     </div>
     <img class="bpiq_src-image"  src="$image" />
 EOM;
-	}else{
+	}else if($a['style']=='pullquote'){
+		//different default values here
+		if($color == '#284c79'){$color = "#FFF";}
+		if($textcolor == 'rgb(136, 172, 217)'){$textcolor = '#666';}
+$card = <<<EOM
+  <span class="bp_pullquote" data-align="$align" style="width: $width; background-color: $color; color: $textcolor;">$content</span>
+EOM;
+
+
+  }else{
 		$content = htmlspecialchars_decode($content);
 		$backgroundthumb = 'style="background:url('.$image.') no-repeat center center;"';
 		$backgroundstyle = '';
@@ -128,5 +141,3 @@ function bpiq_scripts(){
 	wp_enqueue_style( 'bpiq_style', plugins_url( '/css/style.css', __FILE__ ) );
 	wp_enqueue_style( 'bpiq_style2', plugins_url( '/css/style2.css', __FILE__ ) );
 }
-
-

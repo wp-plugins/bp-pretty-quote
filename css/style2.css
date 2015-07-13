@@ -1,17 +1,17 @@
 @font-face {
 	font-family: 'icons';
 	src: url("../font/icons.eot");
-	src: 
-		url("../font/icons.eot?#iefix") format('embedded-opentype'), 
-		url("../font/icons.woff") format('woff'), 
-		url("../font/icons.ttf") format('truetype'), 
+	src:
+		url("../font/icons.eot?#iefix") format('embedded-opentype'),
+		url("../font/icons.woff") format('woff'),
+		url("../font/icons.ttf") format('truetype'),
 		url("../font/icons.svg#icons") format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
-/* Let's set and reset some common styles 
-*  Base style inspiration by CoDrops: 
+/* Let's set and reset some common styles
+*  Base style inspiration by CoDrops:
 *  http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/
 */
 
@@ -19,7 +19,7 @@
 	width: 300px;
 	margin: 20px auto;
 	padding: 20px;
-	position: relative;	
+	position: relative;
 }
 
 .bp-wrap p{
@@ -40,11 +40,11 @@
 
 /* CUSTOM STYLES */
 
-/* leather 
+/* leather
 *   ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 */
 .leather {
-	background: url('../images/dark_leather.jpg') repeat top left #363738;	
+	background: url('../images/dark_leather.jpg') repeat top left #363738;
 	margin-top: 100px;
 	padding-top: 100px;
 	width: 400px;
@@ -53,7 +53,7 @@
 	/*border-top: 10px solid #fff;*/
 }
 .leather div.bp_blockquote{
-	background-color:transparent;	
+	background-color:transparent;
 }
 .leather .bp-thumb {
 	display: block;
@@ -66,7 +66,7 @@
 	left: 50%;
 	top: -90px;
 	margin: 0 0 0 -90px;
-	box-shadow: 
+	box-shadow:
 		inset 1px 1px 4px rgba(0,0,0,0.5),
 		0 2px 3px rgba(0,0,0,0.6);
 }
@@ -79,7 +79,7 @@
 	top: -95px;
 	color: #242526;
 	text-shadow: 0 1px 1px rgba(255,255,255,0.1);
-	background-image:none !important;	
+	background-image:none !important;
 }
 
 .leather div.bp_blockquote:before{
@@ -128,7 +128,7 @@
 }
 
 
-/* swoosh 
+/* swoosh
 *   ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 */
 
@@ -151,7 +151,7 @@
     width: 130px;
     height: 130px;
     border-radius: 50%;
-    content: '\275e'; 
+    content: '\275e';
     position: absolute;
     font-size: 70px;
     line-height: 130px;
@@ -189,7 +189,7 @@
     text-align: right;
 	z-index: 1;
 }
- 
+
 .swoosh .bp-author{
     text-transform: uppercase;
     font-size: 18px;
@@ -198,17 +198,17 @@
     color: #d48158;
     text-shadow: 0 1px 1px rgba(255,255,255,0.1);
 }
- 
+
 .swoosh cite a{
     color: #d7aa94;
     font-style: italic;
 }
- 
+
 .swoosh cite a:hover{
     color: #d48158;
 }
 
-/* balloon 
+/* balloon
 *   ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 */
 
@@ -216,16 +216,16 @@
     width: 500px;
 	background-color: #D2DDFD;
 }
- 
+
 .balloon div.bp_blockquote{
     background: #fff;
     padding: 30px;
     border-radius: 5px;
-    box-shadow: 
-        inset 0 2px 0 rgba(188, 147, 200, 0.7), 
+    box-shadow:
+        inset 0 2px 0 rgba(188, 147, 200, 0.7),
         -5px -4px 25px rgba(0, 0, 0, 0.3);
 	}
-.balloon div.bp_blockquote:after, 
+.balloon div.bp_blockquote:after,
 .balloon div.bp_blockquote:before  {
  top: 100%;
     border: solid transparent;
@@ -284,7 +284,7 @@
     position: absolute;
     right: 10px;
     bottom: 5px;
-    box-shadow: 
+    box-shadow:
         inset 1px 1px 4px rgba(0,0,0,0.5),
         0 2px 3px rgba(0,0,0,0.6);
 }
@@ -295,7 +295,7 @@
     color: rgba(188, 147, 200, 1);
     text-shadow: 0 1px 1px rgba(255,255,255,0.7);
 }
- 
+
 .balloon cite a{
     font-family: 'Alegreya', serif;
     font-weight: 700;
@@ -303,13 +303,13 @@
     color: #fff;
     text-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
- 
+
 .balloon cite a:hover{
     color: rgba(188, 147, 200, 1);
     text-shadow: 0 1px 1px rgba(255,255,255,0.7);
 }
 
-/* polaroid 
+/* polaroid
 *   ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 */
 .polaroid {
@@ -327,7 +327,7 @@
 }
 /* Shadow style from Nicolas Gallagher: http://nicolasgallagher.com/css-drop-shadows-without-images/demo/ */
 /**
-.polaroid:before, 
+.polaroid:before,
 .polaroid:after {
 	content: "";
     position: absolute;
@@ -350,7 +350,7 @@
 	-moz-transform:rotate(3deg);
 	-ms-transform:rotate(3deg);
 	-o-transform:rotate(3deg);
-	transform:rotate(3deg);    
+	transform:rotate(3deg);
 	left: auto;
     right: 10px;
 }
@@ -401,7 +401,7 @@
 
 /** Problems with formatting **/
 
-/* playbill 
+/* playbill
 *   ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 */
 .playbill {
@@ -414,7 +414,7 @@
 }
 .playbill .bp-thumb{
 	background-position: 140% 25%;
-	
+
 }
 .playbill div.bp_blockquote p {
     color: rgba(255,255,255,0.95);
@@ -437,7 +437,7 @@
 }
 .playbill div.bp_blockquote p span:before {
     font-family: 'icons';
-    content: '\275d'; 
+    content: '\275d';
     font-weight: normal;
     opacity: 0.1;
     font-size: 136px;
@@ -466,23 +466,23 @@
     content: '\2014';
     padding-right: 4px;
 }
- 
+
 .playbill .bp-attribution cite a{
     color: #777;
 }
- 
+
 .playbill .bp-attribution cite a:hover{
     color: #fcf779;
 }
 
-/* vinyl 
+/* vinyl
 *   ( CSS credit to CoDrops: http://tympanus.net/codrops/2012/07/25/modern-block-quote-styles/)
 */
 .vinyl {
     width: 390px;
 	left: -35px;
 }
- 
+
 .vinyl div.bp_blockquote {
     text-align: center;
     background: #333;
@@ -490,9 +490,9 @@
     height: 350px;
     padding: 60px;
     border-radius: 50%;
-    box-shadow: 
-        inset 0 0 0 10px #333, 
-        inset 0 0 0 12px rgba(255,255,255,0.6), 
+    box-shadow:
+        inset 0 0 0 10px #333,
+        inset 0 0 0 12px rgba(255,255,255,0.6),
         80px 0 0 rgba(255,255,255,0.3),
         -80px 0 0 rgba(255,255,255,0.3),
         50px 0 0 rgba(60,185,145,0.2),
@@ -536,4 +536,20 @@
 }
 .vinyl cite a:hover{
     color: #000;
+}
+
+/* pullquote
+** credit to CSS-Tricks https://css-tricks.com/better-pull-quotes/
+*/
+.bp_pulledquote {
+	display: block;
+	padding: 10px;
+	margin: 0 0 10px 0;
+	/**width: 170px;**/
+	font-size: 1.5em;
+	line-height: 1.4em;
+	text-align: right;
+	/**color: #666;**/
+	border-left: 3px solid #ccc;
+	  margin: 0 5px;
 }
